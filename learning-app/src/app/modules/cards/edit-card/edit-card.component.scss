@@ -1,0 +1,32 @@
+.container {
+  height: 820px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-card {
+  width: 450px;
+  box-shadow: 1px 3px 10px 0 rgba(0, 0, 0, 0.3);
+  padding: 20px;
+}
+
+.row {
+  margin: 15px;
+  height: 70px;
+}
+
+.theme-row {
+  margin-bottom: 10px;
+  height: 55px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.color {
+  height: 35px;
+}

@@ -1,0 +1,12 @@
+<div class="toolbar">
+  <mat-icon class="btn-add" svgIcon="plus-add" aria-hidden="false" aria-label="icon"
+    (click)='toAddCard()'
+  ></mat-icon>
+  <button mat-raised-button class="btn-reset" type="button" (click)="resetCards()">Reset</button>
+</div>
+
+<div class="container" [ngClass]="container">
+  <app-card *ngFor='let card of cardArray'
+    [card]='card' (removeCard)="removeCard(card)">
+  </app-card>
+</div>

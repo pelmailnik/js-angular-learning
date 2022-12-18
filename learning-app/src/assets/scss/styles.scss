@@ -1,0 +1,55 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+html, body { height: 100%; }
+
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.content {
+  max-width: 900px;
+  margin: auto;
+}
+
+.button-row {
+  text-align: right;
+}
+
+// Mat-button
+
+.mat-flat-button.mat-primary, .mat-raised-button.mat-primary,
+.mat-fab.mat-primary, .mat-mini-fab.mat-primary {
+  background-color: #106CC8;
+  border-radius: 0;
+  margin: 10px 15px 10px 0;
+}
+
+// Mat-field
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: rgba(0,0,0,0);
+}
+
+textarea.mat-input-element {
+  height: 50px;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-label {
+  margin-top: 0;
+}
+
+.mat-form-field-appearance-fill.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label, .mat-form-field-appearance-fill.mat-form-field-can-float .mat-input-server:focus+.mat-form-field-label-wrapper .mat-form-field-label {
+  transform: translateY(-1.1em) scale(0.75);
+}

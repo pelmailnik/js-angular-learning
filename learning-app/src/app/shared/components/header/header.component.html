@@ -1,0 +1,12 @@
+<div class="header">
+  <div class="content">
+    <div class="back">
+      <mat-icon class="header-icon" svgIcon="left-arrow" aria-hidden="false"
+      aria-label="icon" (click)='goBack()' *ngIf='isBackDisplayed()'></mat-icon>
+    </div>
+    <span class="header-title">{{title}}</span>
+    <mat-icon class="header-icon user-icon" svgIcon="user" aria-hidden="false"
+      aria-label="icon" (click)='onUserClicked()'></mat-icon>
+    <span class="header-user">{{user}}</span>
+  </div>
+</div>

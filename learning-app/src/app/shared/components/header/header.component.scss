@@ -1,0 +1,44 @@
+.header {
+  background-color: #137be4;
+  color: #fff;
+  line-height: 50px;
+}
+
+.back {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  height: 36px;
+  width: 60px;
+}
+
+.header-icon {
+  height: 28px;
+  width: 28px;
+  margin: 0 14px;
+  opacity: 0.4;
+    &:hover {
+      opacity: 0.6;
+    }
+}
+
+.header-end {
+  float: right;
+}
+
+.header-user {
+  float: right;
+  opacity: 0.5;
+}
+
+.user-icon {
+  float: right;
+  margin-top: 9px;
+}
+
+.header-title {
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: 18px;
+}

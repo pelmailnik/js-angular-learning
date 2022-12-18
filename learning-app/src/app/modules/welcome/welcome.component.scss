@@ -1,0 +1,19 @@
+.parent {
+  height: 920px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+.block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

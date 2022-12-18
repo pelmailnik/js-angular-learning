@@ -1,0 +1,10 @@
+{
+  "/cards": {
+    "target": "http://localhost:4500",
+    "secure": false
+  },
+  "/user": {
+    "target": "http://localhost:4500",
+    "secure": false
+  }
+}

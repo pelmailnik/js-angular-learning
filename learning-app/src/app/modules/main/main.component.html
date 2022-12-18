@@ -1,0 +1,11 @@
+<app-header></app-header>
+
+<div class="container" *ngIf='isContentDisplayed(); else showCards'>
+  <a class="item" (click)='goToCards()'>
+    <p class="title">Cards</p>
+  </a>
+</div>
+
+<ng-template #showCards>
+  <router-outlet></router-outlet>
+</ng-template>

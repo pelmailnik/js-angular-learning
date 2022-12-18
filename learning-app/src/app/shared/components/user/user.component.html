@@ -1,0 +1,68 @@
+<h1 mat-dialog-title>User</h1>
+<div mat-dialog-content>
+  <form (ngSubmit)="onLogInClick()" [formGroup]="userForm">
+    <mat-form-field class="row" appearance="fill">
+      <mat-label>First name</mat-label>
+      <input matInput formControlName="firstName">
+      <mat-hint *ngIf="isEmpty('firstName')">
+        Required to fill
+        <span class="aster">*</span>
+      </mat-hint>
+      <mat-error *ngIf="isShowMessageRequired('firstName')">
+        Please enter first name.
+      </mat-error>
+      <mat-error *ngIf="isWrongLength('firstName')">
+        Theme name must be more than 3 characters.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="row" appearance="fill">
+      <mat-label>Last name</mat-label>
+      <input matInput formControlName="lastName">
+      <mat-hint *ngIf="isEmpty('lastName')">
+        Required to fill
+        <span class="aster">*</span>
+      </mat-hint>
+      <mat-error *ngIf="isShowMessageRequired('lastName')">
+        Please enter last name.
+      </mat-error>
+      <mat-error *ngIf="isWrongLength('lastName')">
+        Theme name must be more than 3 characters.
+      </mat-error>
+    </mat-form-field>
+
+    <div class="row radio-row">
+      <mat-radio-group class="radio-btn" formControlName="gender" aria-label="Select an option">
+        <mat-radio-button value="male">Male</mat-radio-button>
+        <mat-radio-button value="female">Female</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <mat-form-field class="example-full-width row" appearance="fill">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput formControlName="email">
+      <mat-error *ngIf="isValidField('email')">
+        Please enter a valid email address or clear this field
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width row" appearance="fill">
+      <mat-label>Telephone</mat-label>
+      <span matPrefix>+7 &nbsp;</span>
+      <input type="tel" matInput formControlName="phone" placeholder="800-555-3535">
+      <mat-error *ngIf="isValidField('phone')">
+        Please enter a valid phone number or clear this field
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="full-width row" appearance="fill">
+      <mat-label>Color</mat-label>
+      <input class="color" type="color" matInput formControlName="favoriteColor">
+    </mat-form-field>
+
+    <div mat-dialog-actions class="button-row">
+      <button mat-raised-button color="primary" type="submit" [disabled]="userForm.invalid">Log In</button>
+      <button mat-raised-button type="button" (click)="onCancelClick()">Cancel</button>
+    </div>
+  </form>
+</div>

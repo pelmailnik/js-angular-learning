@@ -1,0 +1,53 @@
+<div class="content">
+  <div class="container">
+    <form (ngSubmit)="save()" [formGroup]="cardEditForm">
+      <div class="edit-card">
+
+        <mat-form-field class="full-width" appearance="fill">
+          <mat-label>Theme</mat-label>
+          <input type="text" matInput formControlName="theme">
+          <mat-error *ngIf="isShowMessageRequired('theme')">
+            Please enter theme.
+          </mat-error>
+          <mat-error *ngIf="isShowMessageLength('theme', false)">
+            Theme name must be more than 3 characters.
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="full-width" appearance="fill">
+          <mat-label>Leave a sourse text</mat-label>
+          <textarea matInput formControlName="sourceText"></textarea>
+          <mat-error *ngIf="isShowMessageRequired('sourceText')">
+            Please enter sourse text.
+          </mat-error>
+          <mat-error *ngIf="isShowMessageLength('sourceText', true)">
+            Theme sourse text must be less than 150 characters.
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="full-width" appearance="fill">
+          <mat-label>Leave a translation text</mat-label>
+          <textarea matInput formControlName="translation"></textarea>
+          <mat-error *ngIf="isShowMessageRequired('translation')">
+            Please enter translation text.
+          </mat-error>
+          <mat-error *ngIf="isShowMessageLength('translation', true)">
+            Theme translation must be less than 150 characters.
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="full-width" appearance="fill">
+          <mat-label>Color</mat-label>
+          <input class="color" type="color" matInput formControlName="color">
+        </mat-form-field>
+
+        <div class="card-edit-footer">
+          <div class="button-row">
+            <button mat-raised-button color="primary" type="submit" [disabled]="cardEditForm.invalid">Save</button>
+            <button mat-raised-button color="primary" type="button" (click)="discard()">Discard</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="card" *ngIf='card.id !== 0'>
+  <div class="card-col">
+    <div class="card-title">{{card.theme}}</div>
+    <div class="card-text">{{card.sourceText}}</div>
+  </div>
+  
+  <div class="card-col">
+    <div class="card-img" [style.background-color]='card.color'></div>
+  </div>
+
+  <div class="card-footer">
+    <button mat-raised-button color="primary" (click)='goToEdit()'>Edit</button>
+    <button mat-raised-button color="primary" (click)='toRemoveCard()'>Remove</button>
+  </div>
+</div>
